@@ -27,4 +27,11 @@ public class VectorTest {
 
         assertEquals(-0.8, u.dot(v), delta);
     }
+
+    @Test
+    public void testScale() {
+        Vector u = new Vector(-2.0, 0.1, 2.0);
+        Vector n1 = new Vector(2.0,-0.1, -2.0);
+        assertEquals(n1, u.scale(-1.0));
+    }
 }

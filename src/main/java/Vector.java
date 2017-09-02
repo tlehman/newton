@@ -18,4 +18,8 @@ public class Vector extends Point {
     public double dot(Vector v) {
         return x*v.x + y*v.y + z*v.z;
     }
+
+    public Vector scale(double c) {
+        return new Vector(c*x, c*y,c*z);
+    }
 }
