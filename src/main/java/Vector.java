@@ -14,4 +14,8 @@ public class Vector extends Point {
     public double norm() {
         return Math.sqrt(x*x + y*y + z*z);
     }
+
+    public double dot(Vector v) {
+        return x*v.x + y*v.y + z*v.z;
+    }
 }

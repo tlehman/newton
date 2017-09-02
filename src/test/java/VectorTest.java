@@ -10,4 +10,21 @@ public class VectorTest {
         Vector v = new Vector(3.0, 4.0, 0.0);
         assertEquals(5.0, v.norm(), delta);
     }
+
+    @Test
+    public void testDotOrthogonal() {
+        Vector u = new Vector(1.0, 0.0, 0.0);
+        Vector v = new Vector(0.0, 1.0, 0.0);
+
+        assertEquals(0.0, u.dot(v), delta);
+    }
+
+    @Test
+    public void testDotNonOrthogonal() {
+        Vector u = new Vector(0.5, 0.0, 0.1);
+        Vector v = new Vector(-2.0, 0.1, 2.0);
+        // -1 + 0 + 0.2 == -0.8
+
+        assertEquals(-0.8, u.dot(v), delta);
+    }
 }

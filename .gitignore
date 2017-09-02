@@ -18,6 +18,8 @@
 hs_err_pid*
 
 
+.idea
+
 ### Gradle ###
 .gradle
 /build/
