@@ -1,8 +1,14 @@
 // Point in 3D Euclidean space
 public class Point {
-    private double x;
-    private double y;
-    private double z;
+    protected double x;
+    protected double y;
+    protected double z;
+
+    public Point() {
+        this.x = 0.0;
+        this.y = 0.0;
+        this.z = 0.0;
+    }
 
     public Point(double x, double y, double z) {
         this.x = x;
@@ -13,6 +19,7 @@ public class Point {
     public Point plus(Point o) {
         return new Point(x + o.x, y + o.y, z + o.z);
     }
+    public Vector minus(Point o) { return new Vector(x - o.x, y - o.y, z - o.z); }
 
     public boolean equals(Object o) {
         return this.x == x && this.y == y && this.z == z;
