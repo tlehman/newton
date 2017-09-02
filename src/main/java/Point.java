@@ -16,9 +16,7 @@ public class Point {
         this.z = z;
     }
 
-    public Point plus(Point o) {
-        return new Point(x + o.x, y + o.y, z + o.z);
-    }
+    public Point plus(Point o) { return new Point(x + o.x, y + o.y, z + o.z); }
     public Vector minus(Point o) { return new Vector(x - o.x, y - o.y, z - o.z); }
 
     public boolean equals(Object o) {

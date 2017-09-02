@@ -15,6 +15,10 @@ public class Vector extends Point {
         return Math.sqrt(x*x + y*y + z*z);
     }
 
+    public Vector plus(Vector v) {
+        return new Vector(x + v.x, y + v.y, z + v.z);
+    }
+
     public double dot(Vector v) {
         return x*v.x + y*v.y + z*v.z;
     }
