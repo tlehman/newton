@@ -32,4 +32,12 @@ public class BodyTest {
         assertEquals(force12, body1.forceFrom(body2));
         assertEquals(6.688, force12.norm(), delta);
     }
+
+    @Test
+    public void testToString() {
+        Vector pos = new Vector(1.1, 0.9, -1.2);
+        Vector vel = new Vector(0.04, -0.31, 0.1);
+        Body b = new Body(1., pos, vel);
+        assertEquals("body[mass=1.00]{ pos:(1.10, 0.90, -1.20), vel:(0.04, -0.31, 0.10) }", b.toString());
+    }
 }

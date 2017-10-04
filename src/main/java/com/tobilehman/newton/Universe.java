@@ -1,7 +1,11 @@
 package com.tobilehman.newton;
 
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
 public class Universe {
     public boolean isBig() { return true; }
+    private final double dt = 0.001; // time step
 
     // Since I'm god of this universe, I set Newton's constant to 1
     public static final double G = 1.0;
@@ -17,6 +21,7 @@ public class Universe {
     // the step method evolves the universe in time by amount dt seconds
     public void step(double dt) {
         Vector[] forces = new Vector[N];
+        for(int i=0; i < N; i++) { forces[i] = new Vector(); }
 
         // iterate over all pairs of bodies, compute total force on body
         for(int i = 0; i < N; i++) {
@@ -36,6 +41,13 @@ public class Universe {
             Vector v = bodies[i].velocity;
             bodies[i].velocity = bodies[i].velocity.plus(a.scale(dt));
             bodies[i].position = bodies[i].position.plus(v.scale(dt));
+        }
+    }
+
+    public void evolve(Consumer<Body[]> visitor) {
+        while(true) {
+            step(dt);
+            visitor.accept(this.bodies);
         }
     }
 }

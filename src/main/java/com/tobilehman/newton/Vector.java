@@ -7,6 +7,10 @@ package com.tobilehman.newton;
 //    com.tobilehman.newton.Vector v = a - b;
 public class Vector extends Point {
 
+    public Vector() {
+        new Vector(0.0, 0.0, 0.0);
+    }
+
     public Vector(double x, double y, double z) {
         this.x = x;
         this.y = y;

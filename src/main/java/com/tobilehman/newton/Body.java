@@ -22,4 +22,8 @@ public class Body {
                 (r12.norm() * r12.norm());
         return rhat.scale(c);
     }
+
+    public String toString() {
+        return String.format("body[mass=%.2f]{ pos:%s, vel:%s }", mass, position, velocity);
+    }
 }

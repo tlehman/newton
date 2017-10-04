@@ -5,7 +5,6 @@ import com.tobilehman.newton.*;
 public class FigureEightOrbit {
     public static void main(String args[]) {
         double m = 1.0;
-        double dt = 0.001;
 
         Vector b1_pos = new Vector(0.97000436, -0.24308753, 0);
         Vector b2_pos = b1_pos.scale(-1.0);
@@ -21,5 +20,10 @@ public class FigureEightOrbit {
 
         Universe universe = new Universe(new Body[]{b1, b2, b3});
 
+        universe.evolve(bodies -> {
+            for(Body b : bodies) {
+                System.out.println(b);
+            }
+        });
     }
 }
