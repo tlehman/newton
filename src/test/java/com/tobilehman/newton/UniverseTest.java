@@ -1,7 +1,7 @@
+package com.tobilehman.newton;
+
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
-
-import java.util.ArrayList;
 
 public class UniverseTest {
     @Test

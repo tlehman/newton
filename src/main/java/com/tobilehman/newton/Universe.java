@@ -1,3 +1,5 @@
+package com.tobilehman.newton;
+
 public class Universe {
     public boolean isBig() { return true; }
 

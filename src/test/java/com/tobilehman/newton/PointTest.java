@@ -1,3 +1,5 @@
+package com.tobilehman.newton;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

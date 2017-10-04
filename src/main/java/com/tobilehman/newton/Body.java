@@ -1,9 +1,11 @@
+package com.tobilehman.newton;
+
 public class Body {
     public final double mass;
 
     // Since this class will be used in the context of a simulated
-    // Universe with many bodies, the state will be updated from
-    // the outside. I'm okay with this, I trust the Universe class.
+    // com.tobilehman.newton.Universe with many bodies, the state will be updated from
+    // the outside. I'm okay with this, I trust the com.tobilehman.newton.Universe class.
     public Point position;
     public Vector velocity;
 

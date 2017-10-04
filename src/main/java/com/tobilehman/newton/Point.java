@@ -1,4 +1,6 @@
-// Point in 3D Euclidean space
+package com.tobilehman.newton;
+
+// com.tobilehman.newton.Point in 3D Euclidean space
 public class Point {
     protected double x;
     protected double y;

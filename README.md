@@ -1,7 +1,7 @@
 # Newtonian physics in java
 
-Newtonian physics gives a way to predict the future state of a system of massive objects in a Euclidean space. This project library of classes such as Point, Vector and Body. 
-The Universe class enables a system built from these classes to be evolved forward in time according to Newton's laws of motion.
+Newtonian physics gives a way to predict the future state of a system of massive objects in a Euclidean space. This project library of classes such as com.tobilehman.newton.Point, com.tobilehman.newton.Vector and com.tobilehman.newton.Body. 
+The com.tobilehman.newton.Universe class enables a system built from these classes to be evolved forward in time according to Newton's laws of motion.
 
 Note: all bold quantities are vectors. SI units are assumed everywhere, here's a brief list in case you don't remember all the SI units:
 

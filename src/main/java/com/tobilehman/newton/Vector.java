@@ -1,8 +1,10 @@
-// Vector in 3D Euclidean space. A vector is the difference between
+package com.tobilehman.newton;
+
+// com.tobilehman.newton.Vector in 3D Euclidean space. A vector is the difference between
 // two points, so
 //
-//    Point a, b;
-//    Vector v = a - b;
+//    com.tobilehman.newton.Point a, b;
+//    com.tobilehman.newton.Vector v = a - b;
 public class Vector extends Point {
 
     public Vector(double x, double y, double z) {
